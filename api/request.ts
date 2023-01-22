@@ -4,7 +4,8 @@ import axios from 'axios';
     return{
   getPosts:() => {
    return axios
-    .get(import.meta.env.VITE_URL + "heroes", {
+    .get(import.meta.env.VITE_URL + "heroStats", {
+
     })
     .then((response) => {
    
