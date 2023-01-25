@@ -1,6 +1,6 @@
 <template>
   <div class="cool">
-    <sort-image />
+
     <image-but />
   </div>
 </template>
