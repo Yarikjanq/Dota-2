@@ -1,16 +1,30 @@
 <template>
   <div class="cool">
+      <input class="bg-red-900" type="text" v-model="searchQuery">
+          <MySelect v-model="imageSort" :options="sortOption"/>
 
-    <image-but />
+         <HeroList :post="imageSorted"/>
   </div>
 </template>
 
 <script setup lang="ts">
-import SortImage from "./components/sortImage.vue";
-import ImageBut from "./components/ImageBut.vue";
 import { ref } from "vue";
+import { GetPosts } from "./hook/GetHeroes";
+import HeroList from "./components/HeroList.vue";
+import sortImage from "./hook/sortImage";
+import MySelect from "./components/UI/MySelect.vue";
+import sortAnd from "./hook/sortAnd"
+import sortItem from "./hook/sortItem"
+const {posts} = GetPosts()
+const {searchQuery, sortingAndSearch} = sortImage(posts)
+const {imageSort, imageSorted} = sortItem(sortingAndSearch)
+const sortOption= ref([
+           {value: 'str', name: 'Srtength'},
+           {value: 'agi', name: 'Agility'},
+           {value: 'int', name: 'Intellect'},
 
-const agis = ref([]);
+         ])
+
 </script>
 <style scoped>
 .cool {
