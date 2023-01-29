@@ -26,7 +26,7 @@
                 </div>
                 <div class="border-t-[3px] border-indigo-500"></div>
             <div class="flex h-[100px] items-end justify-center">
-               <button @click="$router.push('/hero_info/' + poo.id)" class="text-[20px] m-0 rounded-[3px] border-[2px] px-[20px] mb-[20px]">Learn More</button> 
+               <button @click="$router.push('/hero_info/' + poo.id + poo.localized_name)" class="text-[20px] m-0 rounded-[3px] border-[2px] px-[20px] mb-[20px]">Learn More</button> 
             
             </div>
         </div>

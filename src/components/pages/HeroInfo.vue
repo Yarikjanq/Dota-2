@@ -2,13 +2,16 @@
     <div class="cool">
         <div class="">
         asdsda = 
-       <HeroList :post="posts"/>
+           <div>{{ $route.params.id }}</div>
+           <div>{{ $route.params.localized_name }}</div>
+         
+           
         </div>
     </div>
 </template>
 <script setup lang="ts">
 import { GetPosts } from '@/hook/GetHeroes';
-import HeroList from '../HeroList.vue';
+
 
 const {posts} = GetPosts()
 </script>
