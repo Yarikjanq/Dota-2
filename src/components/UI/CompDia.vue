@@ -5,15 +5,16 @@
         <div class="simple-modal-container">
           <div class="simple-modal-content" @click.stop>
             <div class="border-t-[3px] border-indigo-500"></div>
+            <div>
             <div class="flex justify-between mx-[20px]">
               <div>Attacke range:</div>
               <div>
-                {{ hero.attack_range }}
-                {{ hero.id }}
-                {{ hero.localized_name }}
+                {{ heroes.localized_name }}
+                
+
               </div>
             </div>
-
+</div>
             <footer class="simple-modal-footer">
               <button type="button" @click="closeModal">Close</button>
             </footer>
@@ -23,12 +24,20 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+<script>
 export default {
+    props:{
+        heroes:{
+            type:Array,
+            required:true
+            
+        }
+    },
   methods: {
     closeModal() {
-      this.$emit("close");
+      this.$emit('close');
     },
+
   },
 };
 </script>
