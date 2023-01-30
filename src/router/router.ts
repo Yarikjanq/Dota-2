@@ -11,7 +11,7 @@ const routes = [{
     component: HeroesPage
 },
 {
-    path: '/hero_info/:id:localized_name',
+    path: '/hero_info/:id/:localized_name',
     component: HeroInfo
 },
 

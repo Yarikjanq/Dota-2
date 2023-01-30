@@ -1,10 +1,10 @@
 <template>
     <div class="cool">
         <div class="">
-        asdsda = 
+   
            <div>{{ $route.params.id }}</div>
            <div>{{ $route.params.localized_name }}</div>
-         
+     
            
         </div>
     </div>
