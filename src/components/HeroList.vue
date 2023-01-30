@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CompDia v-show="isShowModal" :heroes="selectedHero" />
+    <CompDia v-model:heroes="selectedHero" />
 
     <div class="grid grid-cols-4">
       <div class="m-3 bg-slate-900" v-for="poo in post" :key="poo">
@@ -53,8 +53,6 @@ const isShowModal = ref(false);
 const toggleModal = (id: number) => {
   selectedHero.value = props.post.find((post: any) => post.id === id);
   console.log(selectedHero.value);
-  
-
   isShowModal.value = true;
 
 };

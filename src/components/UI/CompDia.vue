@@ -1,22 +1,41 @@
 <template>
   <div class="">
-    <div class="simple-modal">
-      <div class="simple-modal-backdrop" @click="closeModal">
+    <div class="simple-modal" v-if="heroes"  @click.stop="closeModal">
+      <div class="simple-modal-backdrop">
         <div class="simple-modal-container">
           <div class="simple-modal-content" @click.stop>
-            <div class="border-t-[3px] border-indigo-500"></div>
+            <div>
+            <div class="flex justify-between mx-[20px]">
+             
+             
+              <div class="mx-auto">
+                <img class="w-[40%] mx-auto" :src="'https://api.opendota.com' + heroes.img" >              
+              </div>
+            </div>
+</div>
             <div>
             <div class="flex justify-between mx-[20px]">
               <div>Attacke range:</div>
               <div>
-                {{ heroes.localized_name }}
-                
+                {{ heroes.localized_name }}               
+              </div>
 
+            </div>
+</div>
+<div class="border-t-[3px] border-indigo-500"></div>
+            <div>
+            <div class="flex justify-between mx-[20px]">
+             
+              <div>base_armor:</div>
+              <div>
+                {{ heroes.base_armor}}               
               </div>
             </div>
 </div>
+<div class="border-t-[3px] border-indigo-500"></div>
+
             <footer class="simple-modal-footer">
-              <button type="button" @click="closeModal">Close</button>
+              <button class="border-[2px] mx-auto w-[20%] bg-zinc-500" type="button" @click.stop="closeModal">Close</button>
             </footer>
           </div>
         </div>
@@ -24,8 +43,9 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 export default {
+  name:'CompDia',
     props:{
         heroes:{
             type:Array,
@@ -35,7 +55,7 @@ export default {
     },
   methods: {
     closeModal() {
-      this.$emit('close');
+      this.$emit('update:heroes', false);
     },
 
   },
@@ -90,7 +110,7 @@ export default {
 .simple-modal-footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   height: 80px;
   text-align: center;
 }

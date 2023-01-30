@@ -11,11 +11,10 @@
   </template>
   
   <script lang="ts">
-  import CompDia from '../UI/CompDia.vue';
-  
+
   export default {
     components: {
-        CompDia,
+     
     },
     data: () => ({
       isShowModal: false,
