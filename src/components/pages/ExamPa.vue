@@ -1,21 +1,11 @@
 <template>
     <div>
-        <button @click="increment">{{ count }}</button>
+    <h1>{{ $store.state.like }}</h1>
+        <button class="mr-[100px]" @click="$store.commit('insrease')">+</button>
+        <button @click="$store.commit('decrease')">-</button>
     </div>
 </template>
 <script lang="ts">
-export default{
-  data () {
-    return {
-      count: 0
-    }
-  },
-  methods: {
-    increment () {
-      this.count++
-    }
-  }
-  
-}
+
 
 </script>
