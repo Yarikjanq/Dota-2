@@ -1,5 +1,6 @@
 <template>
   <div class="cool">
+    {{ $store.state.post.selectedHero }}
     <div class="flex justify-around m-[50px]">
       <input
         class="bg-black h-[30px]"

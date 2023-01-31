@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const heroModule = {
   state: () => ({
-    selectedHero: 0,
+    selectedHero: 10,
     dialogVisi: false,
     posts: [],
     viewId: 0,
