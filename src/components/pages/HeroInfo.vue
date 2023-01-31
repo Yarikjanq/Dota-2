@@ -1,11 +1,8 @@
 <template>
     <div class="cool">
         <div class="">
-   
            <div>{{ $route.params.id }}</div>
-           <div>{{ $route.params.localized_name }}</div>
-     
-           
+           <div>{{ $route.params.localized_name }}</div>        
         </div>
     </div>
 </template>

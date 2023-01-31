@@ -10,10 +10,8 @@
   
       <MySelect v-model="imageSort" :options="sortOption" />
     </div>
-  
-    
-    <HeroList :post="imageSorted" />
- 
+    <HeroList 
+    :post="imageSorted" />
   </div>
 </template>
 
@@ -25,7 +23,6 @@ import sortItem from "@/hook/sortItem";
 import MySelect from "../UI/MySelect.vue";
 import HeroList from "../HeroList.vue";
 const { posts } = GetPosts();
-
 const { searchQuery, sortingAndSearch } = sortImage(posts);
 const { imageSort, imageSorted } = sortItem(sortingAndSearch);
 const sortOption = ref([

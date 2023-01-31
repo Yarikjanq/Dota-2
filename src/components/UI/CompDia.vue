@@ -1,41 +1,84 @@
 <template>
   <div class="">
-    <div class="simple-modal" v-if="heroes"  @click.stop="closeModal">
+    <div class="simple-modal" v-if="heroes" @click.stop="closeModal">
       <div class="simple-modal-backdrop">
         <div class="simple-modal-container">
           <div class="simple-modal-content" @click.stop>
             <div>
-            <div class="flex justify-between mx-[20px]">
-             
-             
-              <div class="mx-auto">
-                <img class="w-[40%] mx-auto" :src="'https://api.opendota.com' + heroes.img" >              
+              <div class="flex justify-between mx-[20px]">
+                <div class="mx-auto">
+                  <img
+                    class="w-[40%] mx-auto"
+                    :src="'https://api.opendota.com' + heroes.img"
+                  />
+                </div>
               </div>
             </div>
-</div>
-            <div>
-            <div class="flex justify-between mx-[20px]">
-              <div>Attacke range:</div>
-              <div>
-                {{ heroes.localized_name }}               
-              </div>
-
-            </div>
-</div>
-<div class="border-t-[3px] border-indigo-500"></div>
-            <div>
-            <div class="flex justify-between mx-[20px]">
-             
-              <div>base_armor:</div>
-              <div>
-                {{ heroes.base_armor}}               
+            <div class="mt-[20px]">
+              <div class="flex justify-between mx-[20px]">
+                <div><strong>Attacke range:</strong></div>
+                <div>
+                  {{ heroes.attack_range }}
+                </div>
               </div>
             </div>
-</div>
-<div class="border-t-[3px] border-indigo-500"></div>
-
+            <div class="border-t-[3px] "></div>
+            <div class="mt-[20px]">
+              <div class="flex justify-between mx-[20px]">
+                <div><strong>Base_armor:</strong></div>
+                <div>
+                  {{ heroes.base_armor }}
+                </div>
+              </div>
+            </div>
+            <div class="border-t-[3px] "></div>
+            <div class="mt-[20px]">
+              <div class="flex justify-between mx-[20px]">
+                <div> <strong> Attack type:</strong></div>
+                <div>
+                  {{ heroes.attack_type }}
+                </div>
+              </div>
+            </div>
+           
+            <div class="border-t-[3px]"></div>
+            <div class="mt-[20px]">
+              <div class="flex justify-between mx-[20px]">
+                <div class="flex items-center"> <strong>Roles:</strong></div>
+                <div class="flex flex-col items-end">
+                <div v-for="role in heroes.roles" :key="role">
+                  {{ role }}
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-t-[3px]"></div>
+            <div class="mt-[20px]">
+              <div class="flex justify-between mx-[20px]">
+                <div> <strong> Legs:</strong></div>
+                <div>
+                  {{ heroes.legs }}
+                </div>
+              </div>
+            </div>
+            <div class="border-t-[3px]"></div>
+            <div class="mt-[20px]">
+              <div class="flex justify-between mx-[20px]">
+                <div> <strong> Move speed:</strong></div>
+                <div>
+                  {{ heroes.move_speed }}
+                </div>
+              </div>
+            </div>
+            <div class="border-t-[3px]"></div>
             <footer class="simple-modal-footer">
-              <button class="border-[2px] mx-auto w-[20%] bg-zinc-500" type="button" @click.stop="closeModal">Close</button>
+              <button
+                class="border-[2px] mx-auto w-[20%] bg-zinc-500"
+                type="button"
+                @click.stop="closeModal"
+              >
+                Close
+              </button>
             </footer>
           </div>
         </div>
@@ -43,22 +86,15 @@
     </div>
   </div>
 </template>
-<script lang="ts">
-export default {
-  name:'CompDia',
-    props:{
-        heroes:{
-            type:Array,
-            required:true
-            
-        }
-    },
-  methods: {
-    closeModal() {
-      this.$emit('update:heroes', false);
-    },
-
-  },
+<script lang="ts" setup>
+import { defineProps } from "vue";
+import type { IHero } from "../../types/herointerface";
+defineProps<{
+  heroes?: IHero;
+}>()
+const emits = defineEmits(["update:heroes"]);
+const closeModal = () => {
+  emits("update:heroes", false);
 };
 </script>
 <style scoped>
