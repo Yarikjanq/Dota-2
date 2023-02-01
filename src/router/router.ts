@@ -2,7 +2,7 @@ import MainPage from "@/components/pages/MainPage.vue"
 import HeroesPage from "@/components/pages/HeroesPage.vue"
 import { createRouter, createWebHistory } from "vue-router";
 import HeroInfo from "@/components/pages/HeroInfo.vue";
-import ExamPa from '@/components/pages/ExamPa.vue'
+import ExamPa from '@/components/pages/ExamPa.vue';
 const routes = [{
     path: '/',
     component: MainPage
@@ -19,6 +19,7 @@ const routes = [{
     path: '/exa',
     component: ExamPa
 },
+
 
 
 ]
