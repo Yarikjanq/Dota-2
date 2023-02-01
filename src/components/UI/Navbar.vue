@@ -1,6 +1,6 @@
 <template>
-  <div class="navv flex justify-between h-[60px] items-center">
-    <div class="text-[30px]">Dota 2</div>
+  <div class="navv flex justify-between h-[90px] items-center">
+    <img class="h-[80px] ml-[30px] fixed" src="../img/Dota_2.png" alt="">
     <div class="w-[80%] mx-auto text-end">
       <button class="text-[20px] mr-[100px]" @click="$router.push('/')">
         Home
