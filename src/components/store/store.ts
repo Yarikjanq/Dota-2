@@ -8,6 +8,7 @@ const store = createStore({
     } as {
       heroHistory: IHero[];
     }),
+  
 
   getters: {
     getCounter(state) {

@@ -1,11 +1,18 @@
 <template>
   <div>
     <CompDia v-model:heroes="selectedHero" />
-    <div> {{trackCounter}} </div>
-    <button @click="increase"> Button</button>
+    <div class="" v-if="shows" v-for="track in trackCounter" :key="track">
+    <div> {{ track.localized_name }}</div>
+    </div>
+    <div class="">
+    <button @click="showHero">SHOW</button>
+    </div>
+    <div class="">
+    <button @click="showHeros">HIDEN</button>
+    </div>
     <div class="grid grid-cols-7 w-[100%] mx-auto">
       <div class="m-3 bg-slate-900" v-for="poo in post" :key="poo">
-        <div class="text-center text-[20px] text-cyan-600">
+        <div class="text-center text-[17px] text-cyan-600">
           {{ poo.localized_name }}
         </div>
         <div>
@@ -39,8 +46,15 @@ const increase = () => {
 const trackCounter: ComputedRef<IHero[]> = computed(() => {
       return store.getters.getCounter
     })
-
-
+const showHeros =() =>{
+  if(trackCounter.value.length >= 0){
+    shows.value = false
+  }
+}
+const shows = ref(false)
+const showHero = () =>{
+  shows.value = true
+}
 const selectedHero = ref(0);
 const dialogVisi = ref(false);
 const viewId = ref(0);

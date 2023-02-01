@@ -5,8 +5,11 @@
       <button class="text-[20px] mr-[100px]" @click="$router.push('/')">
         Home
       </button>
-      <button class="text-[20px]" @click="$router.push('/heroes')">
+      <button class="text-[20px] mr-[100px]" @click="$router.push('/heroes')">
         Heroes
+      </button>
+      <button class="text-[20px]" @click="$router.push('/history')">
+        History
       </button>
     </div>
   </div>
