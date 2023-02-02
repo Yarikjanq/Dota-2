@@ -19,10 +19,16 @@ const store = createStore({
     addHeroToHistory(state, payload: IHero) {
       state.heroHistory.push(payload);
     },
+    removeProduct(state, index){
+      state.heroHistory.splice(index, 1);
+    }
   },
   actions: {
     addHeroToHistory({ commit }, selectedHero: IHero) {
       commit("addHeroToHistory", {...selectedHero, date: Date.now()});
+    },
+    removeProduct({commit}, index ){
+      commit("removeProduct", index)
     }
   },
 });

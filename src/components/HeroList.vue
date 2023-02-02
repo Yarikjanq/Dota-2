@@ -7,7 +7,7 @@
           {{ poo.localized_name }}
         </div>
         <div>
-          <img class="w-[40%] mx-auto" :src="getImage(poo)" />
+          <img class="w-[40%] mx-auto valid rounded-full" :src="getImage(poo)" />
         </div>
         <div class="flex h-[100px] items-end justify-center">
           <button

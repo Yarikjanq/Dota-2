@@ -6,6 +6,7 @@
         type="text"
         v-model="searchQuery"
         placeholder="Filter Heroes"
+        
       />
   
       <MySelect v-model="imageSort" :options="sortOption" />
