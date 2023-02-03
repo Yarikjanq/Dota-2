@@ -2,12 +2,9 @@ import MainPage from "@/components/pages/MainPage.vue"
 import HeroesPage from "@/components/pages/HeroesPage.vue"
 import { createRouter, createWebHistory } from "vue-router";
 import HeroInfo from "@/components/pages/HeroInfo.vue";
-const routes = [{
-    path: '/',
-    component: MainPage
-},
+const routes = [
 {
-    path: '/heroes',
+    path: '/',
     component: HeroesPage
 },
 {
