@@ -41,7 +41,6 @@ const props = defineProps<{
 const sum = ref([])
 const  summ = () =>{
    return (Math.floor(props.wl.win/(props.wl.win + props.wl.lose)*100))
-    
 }
 
 
