@@ -7,13 +7,14 @@ export function GetPosts() {
   const GetPOst = async () => {
     try {
       const response = await axios.get(
-        "https://api.opendota.com/api/heroStats",
+        `${import.meta.env.VITE_URL}` + 'heroStats',
         {}
       );
       posts.value = response.data;
       console.log(response);
     } catch (e) {
-      alert("error");
+    console.log(e);
+    ;
     }
   };
 
