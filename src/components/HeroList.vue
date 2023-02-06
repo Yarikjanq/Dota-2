@@ -23,31 +23,12 @@ const props = defineProps<{
   post?: IHero;
   trackCounter?: Array;
 }>()
-const hover = ref(false)
 const store = useStore()
-const increase = () => {
-  store.dispatch('increment', 1)
-}
 const trackCounter: ComputedRef<IHero[]> = computed(() => {
       return store.getters.getCounter
     })
-const showHeros =() =>{
-  if(trackCounter.value.length >= 0){
-    shows.value = false
-  }
-}
-const shows = ref(false)
-const showHero = () =>{
-  shows.value = true
-}
+
 const selectedHero = ref(0);
-const dialogVisi = ref(false);
-const viewId = ref(0);
-const showDialog = (id: number) => {
-  dialogVisi.value = true;
-  viewId.value = id;
-  console.log(viewId.value);
-};
 
 const isShowModal = ref(false);
 
