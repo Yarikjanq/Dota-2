@@ -7,14 +7,11 @@
       <button class="text-[20px] mr-[100px]" @click="$router.push('/')">
         Heroes
       </button>
-      <button class="text-[20px] w-[10%] mr-[100px]" @click="$router.push('/history')">
+      <button class="text-[20px] w-[10%]" @click="$router.push('/history')">
         <div  class="flex justify-end">
         <div class="absolute bg-zinc-300 w-[30px] h-[30px] top-[23px] rounded-[50%]" v-if="trackCounter.length > 0">{{ trackCounter.length }}</div>
         </div>
         History
-      </button>
-      <button class="text-[20px]" @click="$router.push('/id')">
-        MyProfile
       </button>
     </div>
    

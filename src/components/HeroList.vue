@@ -1,10 +1,8 @@
 <template>
   <div>
-    <CompDia v-model:heroes="selectedHero" />
+    <ModalWindow v-model:heroes="selectedHero" />
     <div class="grid grid-cols-12 w-[70%] mx-auto">
-      <button @mouseenter="hover=index" @mouseleave="hover=false" @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
-      <!-- <div v-if="hover == index">  {{ poo.localized_name }}</div> -->
-
+      <button @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
         <div>      
           <img class="mx-auto valid scale" :src="getImage(poo)" />   
         </div>
@@ -20,7 +18,7 @@
 import { computed, ComputedRef, ref } from "vue";
 import { useStore } from "vuex";
 import type { IHero } from ".././types/herointerface";
-import CompDia from "./UI/CompDia.vue";
+import ModalWindow from "./UI/ModalWindow.vue";
 const props = defineProps<{
   post?: IHero;
   trackCounter?: Array;
@@ -70,9 +68,9 @@ const getImage = (poo: any) => {
 .text1 {
 }
 .scale {
-    transition: 0.5s; /* Время эффекта */
+    transition: 0.5s; 
    }
    .scale:hover {
-    transform: scale(1.5); /* Увеличиваем масштаб */
+    transform: scale(1.5);
    }
 </style>

@@ -1,8 +1,7 @@
 <template>
   <div class="cool">
     <HeroList :trackCounter="trackCounter" />
-    <div>
-      
+    <div>      
       <TransitionGroup name="list" tag="ul" class="text-center">
         <div class="text-[30px]" v-if="trackCounter.length === 0"> No History Yet!!</div>
         <li class="flex justify-around items-center bg-[#2F4F4F] mt-[50px] w-[70%] mx-auto" v-for="(track, index) in trackCounter" :key="index">
@@ -17,8 +16,7 @@
           <div>{{ track.localized_name }}</div>
           <div>{{ new Date(track.date).toLocaleString() }}</div>
           <button @click="remove(index)">X</button>  
-                </li>
-         
+                </li>        
               </TransitionGroup>
   </div>
   </div>
