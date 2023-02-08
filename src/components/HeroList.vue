@@ -1,21 +1,13 @@
 <template>
   <div>
     <ModalWindow v-model:heroes="selectedHero" />
-    <div class="grid grid-cols-4 w-full px-[30px] mx-auto">
-      <div class="text-center w-[80%] mb-[50px]" @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
+    <div class="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-[30px] mx-auto gap-[40px]">
+      <div class="text-center w-full mb-[50px]" @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
         <div>      
           <img class="mx-auto valid scale w-full" :src="getImage(poo)" />   
         </div>
         <p class="block_text text-[20px]">{{ poo.localized_name }}</p>
       </div>
-      <!-- <button @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
-        <div>      
-          <img class="mx-auto valid scale" :src="getImage(poo)" />   
-        </div>
-        <div class="flex items-end justify-center">
-       
-        </div>
-      </button> -->
     </div>
  
   </div>

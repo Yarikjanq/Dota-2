@@ -8,7 +8,7 @@
               <div class="flex justify-between mx-[20px]">
                 <div class="mx-auto">
                   <img
-                    class="w-[40%] mx-auto"
+                    class="w-[40%] mx-auto room"
                     :src="'https://api.opendota.com' + heroes.img"
                   />
                 </div>
@@ -111,6 +111,7 @@ const closeModal = () => {
   z-index: 9999;
 }
 
+
 .simple-modal-container {
   position: fixed;
   top: 0;
@@ -131,10 +132,11 @@ const closeModal = () => {
   padding: 20px 30px;
   border-radius: 5px;
   color: #000;
-  background-color: #fff;
+  background-color: silver;
   transform: translate(0, 0);
   transition: all 0.3s ease;
   box-sizing: border-box;
+  box-shadow: 0 0 10px 10px grey;
 }
 
 .simple-modal-header {
@@ -149,5 +151,8 @@ const closeModal = () => {
   justify-content: end;
   height: 80px;
   text-align: center;
+}
+.room{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 </style>
