@@ -13,7 +13,7 @@
         <MySelect v-model="imageSort" :options="sortOption" />    
       </div>
       <HeroList 
-      :post="imageSorted"  :data-index="index" />
+      :post="imageSorted" />
   
     </div>
     </div>
@@ -34,7 +34,9 @@ const sortOption = ref([
   { value: "str", name: "Srtength" },
   { value: "agi", name: "Agility" },
   { value: "int", name: "Intellect" },
+  { value: "", name: "All heroes" },
 ]);
+GetPosts()
 
 </script>
 <style>
