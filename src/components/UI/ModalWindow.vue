@@ -73,7 +73,7 @@
             <div class="border-t-[3px]"></div>
             <footer class="simple-modal-footer">
               <button
-                class="border-[2px] mx-auto w-[20%] bg-zinc-500"
+                class="border-[2px] mx-auto px-[30px] py-[5px] bg-zinc-500 hover:bg-sky-700 rounded-md text-lime-50"
                 type="button"
                 @click.stop="closeModal"
               >

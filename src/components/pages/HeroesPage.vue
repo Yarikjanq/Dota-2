@@ -1,19 +1,22 @@
 <template>
   <div class="cool">
-    <div class="flex justify-around m-[50px]">
-      <input
-        class="bg-black h-[30px]"
-        type="text"
-        v-model="searchQuery"
-        placeholder="Filter Heroes"
-        
-      />
-      <MySelect v-model="imageSort" :options="sortOption" />    
-    </div>
-    <HeroList 
-    :post="imageSorted"  :data-index="index" />
+    <div class="container">
 
-  </div>
+      <div class="flex justify-around py-[70px]">
+        <input
+          class="bg-black h-[30px] p-[20px]"
+          type="text"
+          v-model="searchQuery"
+          placeholder="Filter Heroes"
+          
+        />
+        <MySelect v-model="imageSort" :options="sortOption" />    
+      </div>
+      <HeroList 
+      :post="imageSorted"  :data-index="index" />
+  
+    </div>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -46,4 +49,10 @@ const sortOption = ref([
 .cool1 {
   background-color: rgba(19, 111, 149, 0.37);
 }
+.container{
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+   }
 </style>

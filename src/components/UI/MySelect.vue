@@ -1,14 +1,14 @@
 <template>
   <div>
     <select
-      class="bg-slate-700 h-[30px]"
+      class="bg-slate-700 p-[10px]"
       :v-model="modelValue"
       @change="changeOption"
     >
       <option disabled class=""> <strong>Groupe by</strong></option>
       <option
         class=""
-        v-for="option in options"
+        v-for="option in options"   
         :key="option.value"
         :value="option.value"
       >
