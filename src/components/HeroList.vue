@@ -2,7 +2,7 @@
   <div>
     <ModalWindow v-model:heroes="selectedHero" />
     <div class="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-[30px] mx-auto gap-[40px]">
-      <div class="text-center w-full mb-[50px]" @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
+      <div class="text-center w-full mb-[50px] bg-[#696969]" @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
         <div>      
           <img class="mx-auto valid scale w-full" :src="getImage(poo)" />   
         </div>
