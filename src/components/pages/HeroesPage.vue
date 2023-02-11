@@ -1,7 +1,6 @@
 <template>
   <div class="cool">
     <div class="container">
-
       <div class="flex justify-around py-[70px]">
         <input
           class="bg-black h-[30px] p-[20px]"
@@ -10,9 +9,12 @@
           placeholder="Filter Heroes"
           
         />
-        <MySelect v-model="imageSort" :options="sortOption" />    
+        <div class="flex w-[300px] justify-between">
+        <SelectHeroes :her="posts"/>
+        <MySelect v-model="imageSort" :options="sortOption" />   
+        </div> 
       </div>
-      <HeroList 
+      <HeroList
       :post="imageSorted" />
   
     </div>
@@ -26,6 +28,7 @@ import sortImage from "@/hook/sortImage";
 import sortItem from "@/hook/sortItem";
 import MySelect from "../UI/MySelect.vue";
 import HeroList from "../HeroList.vue";
+import SelectHeroes from "../UI/SelectHeroes.vue";
 
 const { posts } = GetPosts();
 const { searchQuery, sortingAndSearch } = sortImage(posts);

@@ -1,6 +1,5 @@
 <template>
   <div class="cool">
-    <HeroList :trackCounter="trackCounter" />
     <div>      
       <TransitionGroup name="list" tag="ul" class="text-center">
         <div class="text-[30px]" v-if="trackCounter.length === 0"> No History Yet!!</div>

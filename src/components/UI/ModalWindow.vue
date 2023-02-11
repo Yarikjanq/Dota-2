@@ -3,7 +3,10 @@
     <div class="simple-modal" v-if="heroes" @click.stop="closeModal">
       <div class="simple-modal-backdrop">
         <div class="simple-modal-container">
-          <div class="simple-modal-content" @click.stop>
+          <div class="simple-modal-content"
+          :class="{'shadow-[0_0_10px_2px_green]' :heroes.primary_attr == 'agi', 'shadow-[0_0_10px_2px_red]' :heroes.primary_attr == 'str',
+         'shadow-[0_0_10px_2px_blue]' :heroes.primary_attr == 'int'}"
+          @click.stop>
             <div>
               <div class="flex justify-between mx-[20px]">
                 <div class="mx-auto">
@@ -22,7 +25,10 @@
                 </div>
               </div>
             </div>
-            <div class="border-t-[3px] "></div>
+            <div class="border-t-[3px] "
+            :class="{'border-green-600' :heroes.primary_attr == 'agi', 'border-red-600' :heroes.primary_attr == 'str', 'border-blue-700' :heroes.primary_attr == 'int'}"
+            
+            ></div>
             <div class="mt-[20px]">
               <div class="flex justify-between mx-[20px]">
                 <div><strong>Base_armor:</strong></div>
@@ -31,7 +37,9 @@
                 </div>
               </div>
             </div>
-            <div class="border-t-[3px] "></div>
+            <div class="border-t-[3px] "
+            :class="{'border-green-600' :heroes.primary_attr == 'agi', 'border-red-600' :heroes.primary_attr == 'str', 'border-blue-700' :heroes.primary_attr == 'int'}"
+            ></div>
             <div class="mt-[20px]">
               <div class="flex justify-between mx-[20px]">
                 <div> <strong> Attack type:</strong></div>
@@ -41,7 +49,9 @@
               </div>
             </div>
            
-            <div class="border-t-[3px]"></div>
+            <div class="border-t-[3px]"
+            :class="{'border-green-600' :heroes.primary_attr == 'agi', 'border-red-600' :heroes.primary_attr == 'str', 'border-blue-700' :heroes.primary_attr == 'int'}"
+            ></div>
             <div class="mt-[20px]">
               <div class="flex justify-between mx-[20px]">
                 <div class="flex items-center"> <strong>Roles:</strong></div>
@@ -52,7 +62,9 @@
                 </div>
               </div>
             </div>
-            <div class="border-t-[3px]"></div>
+            <div class="border-t-[3px]"
+            :class="{'border-green-600' :heroes.primary_attr == 'agi', 'border-red-600' :heroes.primary_attr == 'str', 'border-blue-700' :heroes.primary_attr == 'int'}"
+            ></div>
             <div class="mt-[20px]">
               <div class="flex justify-between mx-[20px]">
                 <div> <strong> Legs:</strong></div>
@@ -61,7 +73,9 @@
                 </div>
               </div>
             </div>
-            <div class="border-t-[3px]"></div>
+            <div class="border-t-[3px]"
+            :class="{'border-green-600' :heroes.primary_attr == 'agi', 'border-red-600' :heroes.primary_attr == 'str', 'border-blue-700' :heroes.primary_attr == 'int'}"
+            ></div>
             <div class="mt-[20px]">
               <div class="flex justify-between mx-[20px]">
                 <div> <strong> Move speed:</strong></div>
@@ -70,10 +84,13 @@
                 </div>
               </div>
             </div>
-            <div class="border-t-[3px]"></div>
+            <div class="border-t-[3px]"
+            :class="{'border-green-600' :heroes.primary_attr == 'agi', 'border-red-600' :heroes.primary_attr == 'str', 'border-blue-700' :heroes.primary_attr == 'int'}"
+            ></div>
             <footer class="simple-modal-footer">
               <button
-                class="border-[2px] mx-auto px-[30px] py-[5px] bg-zinc-500 hover:bg-sky-700 rounded-md text-lime-50"
+              :class="{'hover:bg-green-700' :heroes.primary_attr == 'agi', 'hover:bg-red-600' :heroes.primary_attr == 'str', 'hover:bg-blue-700' :heroes.primary_attr == 'int'}"
+                class="border-[2px] mx-auto px-[30px] py-[5px] bg-zinc-500 rounded-md text-lime-50"
                 type="button"
                 @click.stop="closeModal"
               >
@@ -136,7 +153,7 @@ const closeModal = () => {
   transform: translate(0, 0);
   transition: all 0.3s ease;
   box-sizing: border-box;
-  box-shadow: 0 0 10px 10px grey;
+
 }
 
 .simple-modal-header {

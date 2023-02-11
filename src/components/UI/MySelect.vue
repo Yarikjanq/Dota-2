@@ -1,11 +1,11 @@
 <template>
   <div>
     <select
-      class="bg-slate-700 p-[10px]"
+      class="bg-slate-700 p-[10px] w-[120px]"
       :v-model="modelValue"
       @change="changeOption"
     >
-      <option disabled class=""> <strong>Groupe by</strong></option>
+      <option disabled class="text-black"> <strong>Groupe by</strong></option>
       <option
         class=""
         v-for="option in options"   

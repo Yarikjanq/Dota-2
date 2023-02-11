@@ -2,11 +2,23 @@
   <div>
     <ModalWindow v-model:heroes="selectedHero" />
     <div class="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-[30px] mx-auto gap-[40px]">
-      <div class="text-center w-full mb-[50px] bg-[#696969]" @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
+      <div class="text-center w-full mb-[50px] border-[5px]"
+      :class="{'border-red-700' :poo.primary_attr === 'str', 'border-green-700' :poo.primary_attr === 'agi', 
+      'border-blue-700' :poo.primary_attr === 'int',
+      'bg-blue-700' :poo.primary_attr === 'int',
+     'bg-red-700' :poo.primary_attr === 'str',
+     'bg-green-700' :poo.primary_attr === 'agi',
+      }"
+       @click="toggleModal(poo.id)" v-for="(poo, index) in post" :key="index">
         <div>      
-          <img class="mx-auto valid scale w-full" :src="getImage(poo)" />   
+          <img class="mx-auto valid scale w-full"
+          :src="getImage(poo)" />   
         </div>
         <p class="block_text text-[20px]">{{ poo.localized_name }}</p>
+        <div v-show="visible" class="flex justify-between">
+        Base health:
+        <div> {{ poo.base_health }} </div>
+        </div>
       </div>
     </div>
  
@@ -17,17 +29,23 @@ import { computed, ComputedRef, ref } from "vue";
 import { useStore } from "vuex";
 import type { IHero } from ".././types/herointerface";
 import ModalWindow from "./UI/ModalWindow.vue";
+import Switch from "./UI/Switch.vue";
+import SelectHeroes from "./UI/SelectHeroes.vue";
+import { GetPosts } from "@/hook/GetHeroes";
 const props = defineProps<{
   post?: IHero;
   trackCounter?: Array;
+  sortOption?: Array;
 }>()
+const { posts } = GetPosts()
 const store = useStore()
 const trackCounter: ComputedRef<IHero[]> = computed(() => {
       return store.getters.getCounter
     })
-
+const selected = ref('')
+const visible = ref(false)
 const selectedHero = ref(0);
-
+const selecte = ref('');
 const isShowModal = ref(false);
 
 const toggleModal = (id: number) => {
