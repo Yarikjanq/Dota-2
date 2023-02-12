@@ -10,13 +10,13 @@
       </div>
       <div class="w-[80%] mx-auto text-end">
         <button
-          class="text-[20px] mr-[100px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px]"
+          class="text-[20px] mr-[100px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px] hover:bg-slate-500"
           @click="$router.push('/')"
         >
           Heroes
         </button>
         <button
-          class="text-[20px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px]"
+          class="text-[20px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px] hover:bg-slate-500"
           @click="$router.push('/history')"
         >
           <div class="flex justify-end">
