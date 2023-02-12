@@ -7,18 +7,15 @@
           type="text"
           v-model="searchQuery"
           placeholder="Filter Heroes"
-          
         />
         <div class="flex w-[300px] justify-between">
-        <SelectHeroes :her="posts"/>
-        <MySelect v-model="imageSort" :options="sortOption" />   
-        </div> 
+          <SelectHeroes :hero="posts" />
+          <MySelect v-model="imageSort" :options="sortOption" />
+        </div>
       </div>
-      <HeroList
-      :post="imageSorted" />
-  
+      <HeroList :post="imageSorted" />
     </div>
-    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -39,8 +36,7 @@ const sortOption = ref([
   { value: "int", name: "Intellect" },
   { value: "", name: "All heroes" },
 ]);
-GetPosts()
-
+GetPosts();
 </script>
 <style>
 .cool {
@@ -54,10 +50,10 @@ GetPosts()
 .cool1 {
   background-color: rgba(19, 111, 149, 0.37);
 }
-.container{
-    max-width: 1360px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-   }
+.container {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 </style>
