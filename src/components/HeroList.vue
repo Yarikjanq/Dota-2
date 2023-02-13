@@ -25,7 +25,8 @@
         </div>
         <p class="block_text text-[20px]">{{ poo.localized_name }}</p>
         <div v-show="showw">
-          <div class="flex justify-between p-[10px] border-b-[2px]">
+          <div class="py-[10px]">
+          <div class="flex justify-between border-b-[2px]">
           <div>
             Attack range
           </div>
@@ -33,8 +34,10 @@
           {{ poo.attack_range }}
           <div ></div>
         </div>
+        </div>
         </div>  
-        <div class="flex justify-between p-[10px] border-b-[2px]">
+        <div class="py-[10px]">
+        <div class="flex justify-between border-b-[2px]">
           <div>
             Attack type
           </div>
@@ -42,7 +45,9 @@
           {{ poo.attack_type }}
         </div>
         </div>
-        <div class="flex justify-between p-[10px] border-b-[2px]">
+        </div>
+        <div class="py-[10px]">
+        <div class="flex justify-between border-b-[2px]">
           <div>
             Base health
           </div>
@@ -50,7 +55,9 @@
           {{ poo.base_health }}
         </div>
         </div>
-        <div class="flex justify-between p-[10px] border-b-[2px]">
+        </div>
+        <div class="py-[10px]">
+        <div class="flex justify-between border-b-[2px]">
           <div>
             Base int
           </div>
@@ -58,7 +65,9 @@
           {{ poo.base_int }}
         </div>
         </div>
-        <div class="flex justify-between p-[10px] border-b-[2px] mb-[20px]">
+        </div>
+        <div class="py-[10px]">
+        <div class="flex justify-between border-b-[2px]">
           <div>
             Base health regen
           </div>
@@ -67,6 +76,7 @@
         </div>
         </div>
         <div>
+          </div>
           </div>
 
         </div>
