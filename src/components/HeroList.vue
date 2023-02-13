@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Switch @remove="showw=!showw"/>
     <ModalWindow v-model:heroes="selectedHero" />
     <div
       class="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-[30px] mx-auto gap-[40px]"
@@ -23,6 +24,52 @@
           <img class="mx-auto valid scale w-full" :src="getImage(poo)" />
         </div>
         <p class="block_text text-[20px]">{{ poo.localized_name }}</p>
+        <div v-show="showw">
+          <div class="flex justify-between p-[10px] border-b-[2px]">
+          <div>
+            Attack range
+          </div>
+        <div>
+          {{ poo.attack_range }}
+          <div ></div>
+        </div>
+        </div>  
+        <div class="flex justify-between p-[10px] border-b-[2px]">
+          <div>
+            Attack type
+          </div>
+        <div>
+          {{ poo.attack_type }}
+        </div>
+        </div>
+        <div class="flex justify-between p-[10px] border-b-[2px]">
+          <div>
+            Base health
+          </div>
+        <div>
+          {{ poo.base_health }}
+        </div>
+        </div>
+        <div class="flex justify-between p-[10px] border-b-[2px]">
+          <div>
+            Base int
+          </div>
+        <div>
+          {{ poo.base_int }}
+        </div>
+        </div>
+        <div class="flex justify-between p-[10px] border-b-[2px] mb-[20px]">
+          <div>
+            Base health regen
+          </div>
+        <div>
+          {{ poo.base_health_regen }}
+        </div>
+        </div>
+        <div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -33,6 +80,7 @@ import { useStore } from "vuex";
 import type { IHero } from ".././types/herointerface";
 import ModalWindow from "./UI/ModalWindow.vue";
 import { GetPosts } from "@/hook/GetHeroes";
+import Switch from "./UI/Switch.vue";
 const props = defineProps<{
   post?: IHero;
   trackCounter?: Array;
@@ -44,7 +92,7 @@ const trackCounter: ComputedRef<IHero[]> = computed(() => {
   return store.getters.getCounter;
 });
 const selectedHero = ref(0);
-
+const showw = ref(false)
 const toggleModal = (id: number) => {
   selectedHero.value = props.post?.find((post: any) => post.id === id);
   console.log(selectedHero.value);

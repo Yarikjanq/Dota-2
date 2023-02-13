@@ -9,7 +9,6 @@
           placeholder="Filter Heroes"
         />
         <div class="flex w-[300px] justify-between">
-          <SelectHeroes :hero="posts" />
           <MySelect v-model="imageSort" :options="sortOption" />
         </div>
       </div>
@@ -25,8 +24,6 @@ import sortImage from "@/hook/sortImage";
 import sortItem from "@/hook/sortItem";
 import MySelect from "../UI/MySelect.vue";
 import HeroList from "../HeroList.vue";
-import SelectHeroes from "../UI/SelectHeroes.vue";
-
 const { posts } = GetPosts();
 const { searchQuery, sortingAndSearch } = sortImage(posts);
 const { imageSort, imageSorted } = sortItem(sortingAndSearch);
