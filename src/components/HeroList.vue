@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Switch @remove="showw=!showw"/>
+    <Switch @remove="showw = !showw" />
     <ModalWindow v-model:heroes="selectedHero" />
     <div
       class="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-[30px] mx-auto gap-[40px]"
     >
       <div
-        class="text-center w-full mb-[50px] border-[5px]"
+        class="text-center w-full border-[5px]"
         :class="{
           'border-red-700': poo.primary_attr === 'str',
 
@@ -26,59 +26,47 @@
         <p class="block_text text-[20px]">{{ poo.localized_name }}</p>
         <div v-show="showw">
           <div class="py-[10px]">
-          <div class="flex justify-between border-b-[2px]">
-          <div>
-            Attack range
+            <div class="flex justify-between border-b-[2px]">
+              <div>Attack range</div>
+              <div>
+                {{ poo.attack_range }}
+                <div></div>
+              </div>
+            </div>
           </div>
-        <div>
-          {{ poo.attack_range }}
-          <div ></div>
-        </div>
-        </div>
-        </div>  
-        <div class="py-[10px]">
-        <div class="flex justify-between border-b-[2px]">
-          <div>
-            Attack type
+          <div class="py-[10px]">
+            <div class="flex justify-between border-b-[2px]">
+              <div>Attack type</div>
+              <div>
+                {{ poo.attack_type }}
+              </div>
+            </div>
           </div>
-        <div>
-          {{ poo.attack_type }}
-        </div>
-        </div>
-        </div>
-        <div class="py-[10px]">
-        <div class="flex justify-between border-b-[2px]">
-          <div>
-            Base health
+          <div class="py-[10px]">
+            <div class="flex justify-between border-b-[2px]">
+              <div>Base health</div>
+              <div>
+                {{ poo.base_health }}
+              </div>
+            </div>
           </div>
-        <div>
-          {{ poo.base_health }}
-        </div>
-        </div>
-        </div>
-        <div class="py-[10px]">
-        <div class="flex justify-between border-b-[2px]">
-          <div>
-            Base int
+          <div class="py-[10px]">
+            <div class="flex justify-between border-b-[2px]">
+              <div>Base int</div>
+              <div>
+                {{ poo.base_int }}
+              </div>
+            </div>
           </div>
-        <div>
-          {{ poo.base_int }}
-        </div>
-        </div>
-        </div>
-        <div class="py-[10px]">
-        <div class="flex justify-between border-b-[2px]">
-          <div>
-            Base health regen
+          <div class="py-[10px]">
+            <div class="flex justify-between border-b-[2px]">
+              <div>Base health regen</div>
+              <div>
+                {{ poo.base_health_regen }}
+              </div>
+            </div>
+            <div></div>
           </div>
-        <div>
-          {{ poo.base_health_regen }}
-        </div>
-        </div>
-        <div>
-          </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -102,7 +90,7 @@ const trackCounter: ComputedRef<IHero[]> = computed(() => {
   return store.getters.getCounter;
 });
 const selectedHero = ref(0);
-const showw = ref(false)
+const showw = ref(false);
 const toggleModal = (id: number) => {
   selectedHero.value = props.post?.find((post: any) => post.id === id);
   console.log(selectedHero.value);

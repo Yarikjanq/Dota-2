@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between h-[90px] items-center">
-    <div class="container flex items-center fixed navv z-[1]">
+    <div class="container flex justify-between items-center fixed navv z-[1]">
       <div class="">
         <img
           class="ml-[30px] h-[90px] bg-black"
@@ -8,15 +8,16 @@
           alt=""
         />
       </div>
-      <div class="w-[80%] mx-auto text-end">
+      <div>
+      <div class="">
         <button
-          class="text-[20px] mr-[100px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px] hover:bg-slate-500"
+          class="text-[20px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px] hover:bg-slate-500 mr-[50px]"
           @click="$router.push('/')"
         >
           Heroes
         </button>
         <button
-          class="text-[20px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px] hover:bg-slate-500"
+          class="text-[20px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px] hover:bg-slate-500 mr-[50px]"
           @click="$router.push('/history')"
         >
           <div class="flex justify-end">
@@ -29,14 +30,23 @@
           </div>
           History
         </button>
+        <button
+          class="text-[20px] border-[1px] bg-[#A9A9A9] px-[15px] py-[4px] hover:bg-slate-500 mr-[50px]" 
+          @click="$router.push(`/${post_id.account_id}`)"
+        >
+          My
+        </button>
+      </div>
       </div>
     </div>
   </div>
 </template>
 <script setup lang="ts">
+import { GetId } from "@/hook/GetId";
 import type { IHero } from "@/types/herointerface";
 import { computed, ref, type ComputedRef } from "@vue/runtime-dom";
 import store from "../store/store";
+const { post_id } = GetId();
 const trackCounter: ComputedRef<IHero[]> = computed(() => {
   return store.getters.getCounter;
 });
