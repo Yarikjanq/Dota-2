@@ -20,8 +20,8 @@
         v-for="(poo, index) in post"
         :key="index"
       >
-        <div>
-          <img class="mx-auto valid scale w-full" :src="getImage(poo)" />
+        <div class="h-min overflow-hidden">
+          <img class="mx-auto hover:scale-125 transition-all duration-500 cursor-pointer w-full" :src="getImage(poo)" />
         </div>
         <p class="block_text text-[20px]">{{ poo.localized_name }}</p>
         <div v-show="showw">
@@ -103,7 +103,13 @@ const getImage = (poo: any) => {
 </script>
 <style scoped>
 .scale {
-  transition: 0.2s;
+  display: inline-block;
+    overflow: hidden; 
+    width: 100%;
+}
+.scale img {
+  transition: 1s; 
+    display: block; 
 }
 .scale:hover {
   transform: scale(1.1);

@@ -1,14 +1,14 @@
 <template>
-  <div class="cool">
+  <div class="cool pt-[110px]">
     <div class="container">
-      <div class="flex justify-around py-[70px]">
+      <div class="flex-col sm:flex-row items-center flex justify-around my-[50px] md:my-0 md:py-[70px]">
         <input
-          class="bg-black h-[30px] p-[20px]"
+          class="bg-black h-[30px] p-[20px] w-[200px] max-w-full rounded-[20px] sm:mb-0 mb-[30px]"
           type="text"
           v-model="searchQuery"
           placeholder="Filter Heroes"
         />
-        <div class="flex w-[300px] justify-between">
+        <div class="flex justify-between">
           <MySelect v-model="imageSort" :options="sortOption" />
         </div>
       </div>

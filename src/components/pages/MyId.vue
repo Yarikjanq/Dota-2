@@ -1,6 +1,6 @@
 <template>
-  <div class="cool">
-    <div class="flex gap-[24px] items-center p-[30px] boo2">
+  <div class="cool pt-[110px]">
+    <div class="flex gap-[24px] items-center p-[30px] boo2 sm:flex-row flex-col">
       <div class="max-w-[150px] h-[150px]">
         <img
           class="rounded-[50%] boo w-full h-full"
@@ -70,8 +70,9 @@
           {{ peer.games }}
           <div>
             <progress
+            
               :value="peer.games"
-              :max="sor()"
+              :max="15"
               class="w-[80%] h-[10px]"
             ></progress>
           </div>
@@ -144,18 +145,13 @@
 <script setup lang="ts">
 import { GetPosts } from "@/hook/GetHeroes";
 import { GetId, GetNum, GetWl } from "@/hook/GetId";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 const { post_id } = GetId();
 const { post_wl } = GetWl();
 const { post_peer } = GetNum();
 const { posts } = GetPosts();
 const isActive = ref(false);
-const sor = () => {
-  return Math.ceil(10 + 5);
-};
-console.log(sor());
-sor
 const sortBy = () => {
   let testToggle = document.querySelector(".testClick");
 
@@ -180,6 +176,7 @@ const Sum = () => {
     (post_wl.value.win / (post_wl.value.win + post_wl.value.lose)) * 100
   );
 };
+
 </script>
 <!-- <script>
 
