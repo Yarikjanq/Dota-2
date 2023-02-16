@@ -1,7 +1,8 @@
 <template>
   <div>
-    <Switch @remove="showw = !showw" />
+  
     <ModalWindow v-model:heroes="selectedHero" />
+    <Switch @remove="showw = !showw" />
     <div
       class="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-[30px] mx-auto gap-[40px]"
     >

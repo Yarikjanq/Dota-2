@@ -32,10 +32,10 @@
       </div>
     </div>
     <div
-      class="p-[40px] grid max-w-[1000px] w-full mx-auto pt-[100px] text-center"
+      class="sm:p-[40px] sm:grid max-w-[1000px] justify-center w-full mx-auto pt-[100px] text-center"
     >
       <div
-        class="grid grid-cols-[233px_repeat(7,_minmax(0,_1fr))] boo3 text-center items-center p-[10px]"
+        class="hidden sm:inline-block sm:grid grid-cols-[233px_repeat(7,_minmax(0,_1fr))] boo3 text-center items-center p-[10px]"
       >
         <div class="text-left">PLAYER</div>
         <button
@@ -53,20 +53,32 @@
         <div class="text-[14px] mx-auto">XPM WITH</div>
       </div>
       <div
-        class="grid grid-cols-[233px_repeat(7,_minmax(0,_1fr))] text-center p-[10px] border-b-[1px] items-center"
+        class="sm:grid grid-cols-[233px_repeat(7,_minmax(0,_1fr))] text-center p-[10px] border-b-[1px] items-center"
         v-for="peer in post_peer"
         :key="peer"
       >
-        <div class="flex gap-3">
-          <img class="" :src="peer.avatar" />
+        <div
+        class="flex gap-3 flex-col sm:flex-row items-center">
+          <img 
+          @click="toggleModal(peer.account_id), image_show = !image_show"
+          class="max-w-[65%] w-full sm:max-w-[20%]" :src="peer.avatarfull" />
           <div
-            class="text-ellipsis overflow-hidden whitespace-nowrap text-cyan-400"
+            class="text-[40px] sm:text-[18px] text-ellipsis overflow-hidden sm:text-left w-[80%] whitespace-nowrap text-cyan-400"
           >
-            {{ peer.personaname }}
+            {{ peer.personaname }}  
           </div>
         </div>
-
-        <div>
+     <div v-if="image_show" class="sm:contents"
+     >
+        <button
+          @click="sortBy"
+          class="text-[14px] inline-block sm:hidden mx-auto testClick"
+          :class="{ active: isActive }"
+        >
+          MP
+        </button>
+        <div
+        >
           {{ peer.games }}
           <div>
             <progress
@@ -77,7 +89,8 @@
             ></progress>
           </div>
         </div>
-
+        <div class="text-[14px] mx-auto inline-block sm:hidden">WITH</div>
+        
         <div>
           {{ peer.win }}
           <div>
@@ -88,6 +101,8 @@
             ></progress>
           </div>
         </div>
+        <div class="text-[14px] mx-auto inline-block sm:hidden">WITH %</div>
+     
         <div>
           {{ peer.with_win }}
           <div>
@@ -98,6 +113,8 @@
             ></progress>
           </div>
         </div>
+        <div class="text-[14px] mx-auto inline-block sm:hidden">AGAINST</div>
+     
         <div>
           {{ peer.against_win }}
           <div>
@@ -108,6 +125,7 @@
             ></progress>
           </div>
         </div>
+        <div class="text-[14px] mx-auto inline-block sm:hidden">WITH AGAINST</div>
         <div>
           {{ peer.against_games }}
           <div>
@@ -118,6 +136,7 @@
             ></progress>
           </div>
         </div>
+        <div class="text-[14px] mx-auto inline-block sm:hidden">GPM WITH</div>
         <div>
           {{ peer.with_gpm_sum }}
           <div>
@@ -128,6 +147,7 @@
             ></progress>
           </div>
         </div>
+        <div class="text-[14px] mx-auto inline-block sm:hidden">XPM WITH</div>
         <div>
           {{ peer.with_xpm_sum }}
           <div>
@@ -138,6 +158,7 @@
             ></progress>
           </div>
         </div>
+   </div>
       </div>
     </div>
   </div>
@@ -152,6 +173,7 @@ const { post_wl } = GetWl();
 const { post_peer } = GetNum();
 const { posts } = GetPosts();
 const isActive = ref(false);
+const image_show = ref(false)
 const sortBy = () => {
   let testToggle = document.querySelector(".testClick");
 
@@ -176,7 +198,11 @@ const Sum = () => {
     (post_wl.value.win / (post_wl.value.win + post_wl.value.lose)) * 100
   );
 };
-
+const selectedHero =ref('')
+const toggleModal = (account_id: number) => {
+  selectedHero.value = post_peer.value.find((post_peer: any) => post_peer.account_id === account_id);
+  console.log(selectedHero.value);
+};
 </script>
 <!-- <script>
 
