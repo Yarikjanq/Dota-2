@@ -1,16 +1,20 @@
 <template>
   <div class="cool pt-[110px]">
-    <div class="flex gap-[24px] items-center p-[30px] boo2 sm:flex-row flex-col">
+    <div
+      class="flex gap-[24px] items-center p-[30px] boo2 sm:flex-row flex-col"
+    >
       <div class="max-w-[150px] h-[150px]">
         <img
           class="rounded-[50%] boo w-full h-full"
           :src="post_id.avatarfull"
         />
       </div>
+
       <div>
         <div class="text-[28px]">
           {{ post_id.personaname }}
         </div>
+
         <div class="flex">
           <div class="mr-[25px] mt-[10px]">
             <div class="text-[14px] boo1">WINS</div>
@@ -57,108 +61,110 @@
         v-for="peer in post_peer"
         :key="peer"
       >
-        <div
-        class="flex gap-3 flex-col sm:flex-row items-center">
-          <img 
-          @click="toggleModal(peer.account_id), image_show = !image_show"
-          class="max-w-[65%] w-full sm:max-w-[20%]" :src="peer.avatarfull" />
+        <div class="flex gap-3 flex-col sm:flex-row items-center">
+          <img
+            @click="toggleModal(peer.account_id), (image_show = !image_show)"
+            class="max-w-[65%] w-full sm:max-w-[20%]"
+            :src="peer.avatarfull"
+          />
           <div
             class="text-[40px] sm:text-[18px] text-ellipsis overflow-hidden sm:text-left w-[80%] whitespace-nowrap text-cyan-400"
           >
-            {{ peer.personaname }}  
+            {{ peer.personaname }}
           </div>
         </div>
-     <div v-if="image_show" class="sm:contents"
-     >
-        <button
-          @click="sortBy"
-          class="text-[14px] inline-block sm:hidden mx-auto testClick"
-          :class="{ active: isActive }"
-        >
-          MP
-        </button>
-        <div
-        >
-          {{ peer.games }}
+
+        <div class="sm:contents p-[10px_50px]">
+          <button
+            @click="sortBy"
+            class="text-[14px] inline-block sm:hidden mx-auto testClick"
+            :class="{ active: isActive }"
+          >
+            MP
+          </button>
           <div>
-            <progress
-            
-              :value="peer.games"
-              :max="15"
-              class="w-[80%] h-[10px]"
-            ></progress>
+            {{ peer.games }}
+
+            <div>
+              <progress
+                :value="peer.games"
+                :max="15"
+                class="w-[80%] h-[10px]"
+              ></progress>
+            </div>
           </div>
-        </div>
-        <div class="text-[14px] mx-auto inline-block sm:hidden">WITH</div>
-        
-        <div>
-          {{ peer.win }}
+          <div class="text-[14px] mx-auto inline-block sm:hidden">WITH</div>
+
           <div>
-            <progress
-              :value="peer.win"
-              max="12"
-              class="w-[80%] h-[10px]"
-            ></progress>
+            {{ peer.win }}
+            <div>
+              <progress
+                :value="peer.win"
+                max="12"
+                class="w-[80%] h-[10px]"
+              ></progress>
+            </div>
           </div>
-        </div>
-        <div class="text-[14px] mx-auto inline-block sm:hidden">WITH %</div>
-     
-        <div>
-          {{ peer.with_win }}
+          <div class="text-[14px] mx-auto inline-block sm:hidden">WITH %</div>
+
           <div>
-            <progress
-              :value="peer.with_win"
-              max="12"
-              class="w-[80%] h-[10px]"
-            ></progress>
+            {{ peer.with_win }}
+            <div>
+              <progress
+                :value="peer.with_win"
+                max="12"
+                class="w-[80%] h-[10px]"
+              ></progress>
+            </div>
           </div>
-        </div>
-        <div class="text-[14px] mx-auto inline-block sm:hidden">AGAINST</div>
-     
-        <div>
-          {{ peer.against_win }}
+          <div class="text-[14px] mx-auto inline-block sm:hidden">AGAINST</div>
+
           <div>
-            <progress
-              :value="peer.against_win"
-              max="12"
-              class="w-[80%] h-[10px]"
-            ></progress>
+            {{ peer.against_win }}
+            <div>
+              <progress
+                :value="peer.against_win"
+                max="12"
+                class="w-[80%] h-[10px]"
+              ></progress>
+            </div>
           </div>
-        </div>
-        <div class="text-[14px] mx-auto inline-block sm:hidden">WITH AGAINST</div>
-        <div>
-          {{ peer.against_games }}
+          <div class="text-[14px] mx-auto inline-block sm:hidden">
+            WITH AGAINST
+          </div>
           <div>
-            <progress
-              :value="peer.against_games"
-              max="12"
-              class="w-[80%] h-[10px]"
-            ></progress>
+            {{ peer.against_games }}
+            <div>
+              <progress
+                :value="peer.against_games"
+                max="12"
+                class="w-[80%] h-[10px]"
+              ></progress>
+            </div>
           </div>
-        </div>
-        <div class="text-[14px] mx-auto inline-block sm:hidden">GPM WITH</div>
-        <div>
-          {{ peer.with_gpm_sum }}
+          <div class="text-[14px] mx-auto inline-block sm:hidden">GPM WITH</div>
           <div>
-            <progress
-              :value="peer.with_gpm_sum"
-              max="6548"
-              class="w-[80%] h-[10px]"
-            ></progress>
+            {{ peer.with_gpm_sum }}
+            <div>
+              <progress
+                :value="peer.with_gpm_sum"
+                max="6548"
+                class="w-[80%] h-[10px]"
+              ></progress>
+            </div>
           </div>
-        </div>
-        <div class="text-[14px] mx-auto inline-block sm:hidden">XPM WITH</div>
-        <div>
-          {{ peer.with_xpm_sum }}
+          <div class="text-[14px] mx-auto inline-block sm:hidden">XPM WITH</div>
           <div>
-            <progress
-              :value="peer.with_xpm_sum"
-              max="8878"
-              class="w-[80%] h-[10px]"
-            ></progress>
+            {{ peer.with_xpm_sum }}
+            <div>
+              <progress
+                :value="peer.with_xpm_sum"
+                max="8878"
+                class="w-[80%] h-[10px]"
+              ></progress>
+            </div>
           </div>
         </div>
-   </div>
       </div>
     </div>
   </div>
@@ -173,7 +179,7 @@ const { post_wl } = GetWl();
 const { post_peer } = GetNum();
 const { posts } = GetPosts();
 const isActive = ref(false);
-const image_show = ref(false)
+const image_show = ref(false);
 const sortBy = () => {
   let testToggle = document.querySelector(".testClick");
 
@@ -198,9 +204,11 @@ const Sum = () => {
     (post_wl.value.win / (post_wl.value.win + post_wl.value.lose)) * 100
   );
 };
-const selectedHero =ref('')
+const selectedHero = ref("");
 const toggleModal = (account_id: number) => {
-  selectedHero.value = post_peer.value.find((post_peer: any) => post_peer.account_id === account_id);
+  selectedHero.value = post_peer.value.find(
+    (post_peer: any) => post_peer.account_id === account_id
+  );
   console.log(selectedHero.value);
 };
 </script>
