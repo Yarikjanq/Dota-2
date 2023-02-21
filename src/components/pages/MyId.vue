@@ -1,42 +1,43 @@
 <template>
   <div class="cool pt-[110px]">
-    <div
-      class="flex gap-[24px] items-center p-[30px] boo2 sm:flex-row flex-col"
-    >
-      <div class="max-w-[150px] h-[150px]">
-        <img
-          class="rounded-[50%] boo w-full h-full"
-          :src="post_id.avatarfull"
-        />
-      </div>
-
-      <div>
-        <div class="text-[28px]">
-          {{ post_id.personaname }}
+    <div class="boo2">
+      <div
+        class="flex gap-[24px] items-center p-[30px_40px] sm:flex-row flex-col w-full max-w-[1200px] mx-auto"
+      >
+        <div class="max-w-[150px] h-[150px]">
+          <img
+            class="rounded-[50%] boo w-full h-full"
+            :src="post_id.avatarfull"
+          />
         </div>
 
-        <div class="flex">
-          <div class="mr-[25px] mt-[10px]">
-            <div class="text-[14px] boo1">WINS</div>
-            <div class="text-[24px] text-green-500">
-              {{ post_wl.win }}
-            </div>
+        <div>
+          <div class="text-[28px]">
+            {{ post_id.personaname }}
           </div>
-          <div class="mr-[25px] mt-[10px]">
-            <div class="text-[14px] boo1">LOSSES</div>
-            <div class="text-[24px] text-red-500">
-              {{ post_wl.lose }}
+          <div class="flex">
+            <div class="mr-[25px] mt-[10px]">
+              <div class="text-[14px] boo1">WINS</div>
+              <div class="text-[24px] text-green-500">
+                {{ post_wl.win }}
+              </div>
             </div>
-          </div>
-          <div>
-            <div class="text-[14px] mt-[10px] boo1">WINRATE</div>
-            <div class="text-[24px]">{{ Sum() }}%</div>
+            <div class="mr-[25px] mt-[10px]">
+              <div class="text-[14px] boo1">LOSSES</div>
+              <div class="text-[24px] text-red-500">
+                {{ post_wl.lose }}
+              </div>
+            </div>
+            <div>
+              <div class="text-[14px] mt-[10px] boo1">WINRATE</div>
+              <div class="text-[24px]">{{ Sum() }}%</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="sm:p-[40px] sm:grid max-w-[1000px] justify-center w-full mx-auto pt-[100px] text-center"
+      class="sm:p-[40px] sm:grid max-w-[1200px] w-full mx-auto pt-[100px] text-center"
     >
       <div
         class="hidden sm:inline-block sm:grid grid-cols-[233px_repeat(7,_minmax(0,_1fr))] boo3 text-center items-center p-[10px]"
@@ -172,14 +173,14 @@
 <script setup lang="ts">
 import { GetPosts } from "@/hook/GetHeroes";
 import { GetId, GetNum, GetWl } from "@/hook/GetId";
-import { computed, ref } from "vue";
-
+import { computed, ComputedRef, ref } from "vue";
 const { post_id } = GetId();
 const { post_wl } = GetWl();
 const { post_peer } = GetNum();
 const { posts } = GetPosts();
 const isActive = ref(false);
 const image_show = ref(false);
+
 const sortBy = () => {
   let testToggle = document.querySelector(".testClick");
 
@@ -209,7 +210,6 @@ const toggleModal = (account_id: number) => {
   selectedHero.value = post_peer.value.find(
     (post_peer: any) => post_peer.account_id === account_id
   );
-  console.log(selectedHero.value);
 };
 </script>
 <!-- <script>

@@ -90,10 +90,9 @@ const trackCounter: ComputedRef<IHero[]> = computed(() => {
   border: 3px solid blue;
 }
 .container {
-  max-width: 1960px;
+  max-width: 3000px;
   width: 100%;
   margin: 0 auto;
   padding: 10px;
 }
-
 </style>

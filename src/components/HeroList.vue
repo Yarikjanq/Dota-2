@@ -1,10 +1,13 @@
 <template>
   <div>
+    
     <ModalWindow v-model:heroes="selectedHero" />
     <Switch @remove="showw = !showw" />
+
     <div
       class="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-[30px] mx-auto gap-[40px]"
     >
+   
       <div
         class="text-center w-full border-[5px]"
         :class="{
@@ -82,6 +85,7 @@ import type { IHero } from ".././types/herointerface";
 import ModalWindow from "./UI/ModalWindow.vue";
 import { GetPosts } from "@/hook/GetHeroes";
 import Switch from "./UI/Switch.vue";
+import Navbar from "./UI/Navbar.vue";
 const props = defineProps<{
   post?: IHero;
   trackCounter?: Array;
