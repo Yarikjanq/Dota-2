@@ -1,14 +1,14 @@
 <template>
   <div class="style">
-    <header class="flex h-[91px] items-center px-[70px] gap-[41px]">
+    <header class="flex h-[91px] items-center px-[70px] gap-[41px]" id="Home">
       <div class="text p-[13px_35px_13px_0]">BrandName</div>
 
       <div class="flex justify-between w-full gap-[10px]">
         <div class="flex text-1 gap-[21px] items-center">
-          <div class="">Home</div>
-          <div>Product</div>
-          <div>Pricing</div>
-          <div>Contact</div>
+          <a href="#Home">Home</a>
+          <a href="#Product">Product</a>
+          <a href="#Pricing">Pricing</a>
+          <a href="#Contact">Contact</a>
         </div>
         <div
           class="flex items-center login w-full max-w-[302px] justify-between"
@@ -51,7 +51,7 @@
 
     <!-- Telephone -->
     <div
-      class="w-full max-w-[1050px] h-[783px] mx-auto relative mt-[50px] flex items-center px-[60px]"
+      class="w-full max-w-[1050px] h-[783px] mx-auto relative mt-[50px] flex items-start pt-[60px] px-[60px]"
     >
       <div class="grid gap-[35px]">
         <div class="navv">
@@ -82,11 +82,12 @@
       </div>
     </div>
 
+    <!-- Better strategy -->
     <section>
       <div
-        class="max-w-[1050px] w-full h-[778px] mx-auto flex flex-col items-center gap-[24px]"
+        class="max-w-[1050px] w-full mx-auto flex flex-col items-center gap-[24px] h-[721px] p-[96px_0px]"
       >
-        <div class="pb-[45px]">
+        <div class="p-[45px_45px]" id="Product">
           <div class="navv2">Better Strategy With Quality Business</div>
           <div class="text-[#737373] w-[470px] h-[40px] text-center">
             Problems trying to resolve the conflict between the two major realms
@@ -97,7 +98,7 @@
           class="max-w-[1050px] w-full grid grid-cols-3 gap-[30px] px-[30px]"
         >
           <div
-            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center"
+            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center p-[35px_20px]"
           >
             <div class="max-w-[281px] w-full h-[69px] gap-[20px] flex m-auto">
               <div>
@@ -124,7 +125,7 @@
           </div>
 
           <div
-            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center"
+            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center p-[35px_20px]"
           >
             <div class="max-w-[281px] w-full h-[69px] gap-[20px] flex m-auto">
               <div>
@@ -150,7 +151,7 @@
             </div>
           </div>
           <div
-            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center"
+            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center p-[35px_20px]"
           >
             <div class="max-w-[281px] w-full h-[69px] gap-[20px] flex m-auto">
               <div>
@@ -176,7 +177,7 @@
             </div>
           </div>
           <div
-            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center"
+            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center p-[35px_20px]"
           >
             <div class="max-w-[281px] w-full h-[69px] gap-[20px] flex m-auto">
               <div>
@@ -202,7 +203,7 @@
             </div>
           </div>
           <div
-            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center"
+            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center p-[35px_20px]"
           >
             <div class="max-w-[281px] w-full h-[69px] gap-[20px] flex m-auto">
               <div>
@@ -228,7 +229,7 @@
             </div>
           </div>
           <div
-            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center"
+            class="border-[1px] border-[#F2F2F2] max-w-[328px] w-full h-[139px] rounded-[2px] flex items-center p-[35px_20px]"
           >
             <div class="max-w-[281px] w-full h-[69px] gap-[20px] flex m-auto">
               <div>
@@ -250,6 +251,310 @@
               <div>
                 <div class="navv3">Investment Trading</div>
                 <div class="navv4">the quick fox jumps over the lazy dog</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Regina Miles -->
+    <section>
+      <div
+        class="h-[773px] flex gap-[80px] flex-col items-center p-[112px_0px]"
+      >
+        <div class="text-center grid gap-[10px]">
+          <div class="navv5">What Clients Say</div>
+          <div class="navv6">
+            Problems trying to resolve the conflict between<br />
+            the two major realms of Classical physics: Newtonian mechanics
+          </div>
+        </div>
+        <div class="w-full max-w-[744px] h-[362px]">
+          <div class="bg-white p-[40px_35px] grid gap-[30px]">
+            <img class="m-auto" src="../img/user.1.jpg" alt="" />
+            <div class="grid gap-[15px]">
+              <div class="w-full max-w-[433px] text-center mx-auto">
+                Slate helps you see how many more days you need<br />
+                to work to reach your financial goal for the month and year.
+              </div>
+              <div class="flex justify-center">
+                <img src="../img/Vector-5.jpg" alt="" />
+                <img src="../img/Vector-5.jpg" alt="" />
+                <img src="../img/Vector-5.jpg" alt="" />
+                <img src="../img/Vector-5.jpg" alt="" />
+                <img src="../img/icn bx-star.png" alt="" />
+              </div>
+              <div class="text-center">
+                <div class="navv7">Regina Miles</div>
+                <div class="navv8">Designer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <div class="p-[80px_0px] flex flex-col items-center gap-[50px]">
+      <div>
+        <div class="navv9">Download Our App</div>
+        <div class="navv10">
+          Problems trying to resolve the conflict between <br />
+          the two major realms of Classical physics: Newtonian mechanics
+        </div>
+      </div>
+      <div class="flex gap-[10px]">
+        <div
+          class="border-[1px] border-[#BDBDBD] apple rounded-[10px] w-[210px] h-[82px] p-[18px_28px]"
+        >
+          <div class="flex gap-[25px] items-center justify-center">
+            <img src="../img/appl1.png" alt="" />
+            <div>
+              <div class="navv11">Download on</div>
+              <div class="navv12">App Store</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-[1px] border-[#BDBDBD] apple rounded-[10px] w-[218px] h-[82px] p-[18px_28px]"
+        >
+          <div class="flex gap-[25px] items-center justify-center">
+            <img src="../img/play.png" alt="" />
+            <div>
+              <div class="navv11">Download on</div>
+              <div class="navv12">Google Play</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-[1px] border-[#BDBDBD] apple rounded-[10px] w-[233px] h-[82px] p-[18px_28px]"
+        >
+          <div class="flex gap-[25px] items-center justify-center">
+            <img src="../img/amazon.png" alt="" />
+            <div>
+              <div class="navv11">Download on</div>
+              <div class="navv12">Amazon.com</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-[1px] border-[#BDBDBD] apple rounded-[10px] w-[239px] h-[82px] p-[18px_28px]"
+        >
+          <div class="flex gap-[25px] items-center justify-center">
+            <img src="../img/windows.png" alt="" />
+            <div>
+              <div class="navv11">Download on</div>
+              <div class="navv12">Windows Store</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pricing -->
+    <section>
+      <div
+        id="Pricing"
+        class="h-[766px] w-full max-w-[1050px] p-[160px_30px] mx-auto grid gap-[96px]"
+      >
+        <div class="grid gap-[10px]">
+          <div class="navv13">Pricing</div>
+          <div class="navv14">
+            Problems trying to resolve the conflict between <br />
+            the two major realms of Classical physics: Newtonian mechanics
+          </div>
+        </div>
+        <div class="flex gap-[30px]">
+          <div
+            class="w-full max-w-[508px] h-[243px] bg-[#FFFFFF] rounded-[10px] p-[30px]"
+          >
+            <div class="flex items-center">
+              <div
+                class="w-full max-w-[217px] h-[143px] flex items-start gap-[15px] flex-col"
+              >
+                <div class="navv15">FREE</div>
+                <div class="navv16">
+                  Most calendars are designed <br />
+                  for teams. Slate is designed<br />
+                  for freelancers who want <br />
+                  a simple way
+                </div>
+              </div>
+              <div class="flex flex-col gap-[25px]">
+                <div class="flex gap-[10px] items-center">
+                  <div class="navv19">O</div>
+                  <div>
+                    <div class="navv18">$</div>
+                    <div class="navv17">Per Month</div>
+                  </div>
+                </div>
+                <div class="bg-[#23A6F0]">
+                  <button class="navv20 p-[15px_40px]">Try for free</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full max-w-[508px] h-[243px] bg-[#FFFFFF] rounded-[10px] p-[30px]"
+          >
+            <div class="flex items-center">
+              <div
+                class="w-full max-w-[217px] h-[143px] flex items-start gap-[15px] flex-col"
+              >
+                <div class="navv15">STANDART</div>
+                <div class="navv16">
+                  Most calendars are designed <br />
+                  for teams. Slate is designed<br />
+                  for freelancers who want <br />
+                  a simple way
+                </div>
+              </div>
+              <div class="flex flex-col gap-[25px]">
+                <div class="flex gap-[10px] items-center">
+                  <div class="navv19">19</div>
+                  <div>
+                    <div class="navv18">$</div>
+                    <div class="navv17">Per Month</div>
+                  </div>
+                </div>
+                <div class="bg-[#23A6F0]">
+                  <button class="navv20 p-[15px_40px]">Try for free</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- World -->
+    <section>
+      <div class="flex items-center justify-center flex-col" id="Contact">
+        <div class="h-[809px] w-full max-w-[1050px]">
+          <div class="flex items-center p-[50px_0px]">
+            <div
+              class="navv21 w-full max-w-[602px] h-[329px] p-[50px_0px] grid gap-[15px]"
+            >
+              <div>
+                We Have Branches All<br />
+                Over The World
+              </div>
+              <div class="navv22">
+                The gradual accumulation of information about atomic and<br />
+                small-scale behaviour during the first quarter of the 20th<br />
+                century, which gave some indications about how small things<br />
+                do behave, produced an increasing confusion which was<br />
+                Heisenberg, and Born.
+              </div>
+            </div>
+            <div class="w-[416px] h-[270px] flex items-center p-[50px_0px]">
+              <img class="" src="../img/pngwing 1.png" alt="" />
+            </div>
+          </div>
+
+          <div class="flex justify-center p-[50px_30px]">
+            <div class="">
+              <img class="h-[610px]" src="../img/man.png" alt="" />
+            </div>
+            <div class="w-[610px] bg-white h-[610px]">
+              <div class="p-[40px_50px] grid gap-[40px]">
+                <div class="navv23">Book Appointment</div>
+                <div>
+                  <div class="navv24">Name*</div>
+                  <div class="flex justify-center p-[14px_0px]">
+                    <input
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                      type="text"
+                      placeholder="Full Name*"
+                    />
+                  </div>
+                  <div class="navv24">Email address*</div>
+                  <div class="flex justify-center p-[14px_0px]">
+                    <input
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                      type="text"
+                      placeholder="example@gmail.com*"
+                    />
+                  </div>
+                  <div class="navv24">Departement*</div>
+                  <div class="flex justify-center p-[14px_0px]">
+                    <input
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                      type="text"
+                      placeholder="Full Name*"
+                    />
+                  </div>
+                  <div class="navv24">Time*</div>
+                  <div class="flex justify-center p-[14px_0px]">
+                    <input
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                      type="text"
+                      placeholder="Full Name*"
+                    />
+                  </div>
+                </div>
+                <div class="bg-[#23A6F0] rounded-[5px]">
+                  <button class="p-[15px_186px] navv25">
+                    Book Appointment
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white w-full h-[414px]"></div>
+    </section>
+    <!-- Info -->
+
+    <section>
+      <div class="w-full h-[338px] bg-[#252B42]">
+        <div class="osnova p-[80px_0px]">
+          <div
+            class="flex gap-[30px] justify-center w-full max-w-[1046px] mx-auto p-[0px_25px]"
+          >
+            <div class="grid gap-[25px]">
+              <div class="navv26">Get in Touch</div>
+              <div class="navv27 w-[213px]">
+                the quick fox jumps over the<br />
+                lazy dog
+              </div>
+              <div>
+                <div class="flex gap-[20px] w-full max-w-[238px]">
+                  <img src="../img/insta.png" alt="" />
+                  <img src="../img/face.png" alt="" />
+                  <img src="../img/twitter.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="grid gap-[20px] w-[241px]">
+              <div class="navv26">Company info</div>
+              <div class="navv27 grid gap-[10px]">
+                <div class="">About us</div>
+                <div>Carrier</div>
+                <div>We are hiring</div>
+                <div>Blog</div>
+              </div>
+            </div>
+            <div class="grid gap-[20px] w-[240px]">
+              <div class="navv26">Features</div>
+              <div class="navv27 grid gap-[10px]">
+                <div class="">Business Marketing</div>
+                <div>User Analytic</div>
+                <div>Live Chat</div>
+                <div>Unlimited Support</div>
+              </div>
+            </div>
+            <div class="grid gap-[20px]">
+              <div class="navv26">Resources</div>
+              <div class="navv27 grid gap-[10px]">
+                <div class="">Ios & Android</div>
+                <div>Watch a Demo</div>
+                <div>Customers</div>
+                <div>API</div>
               </div>
             </div>
           </div>
@@ -295,7 +600,7 @@
   width: 507.14px;
   height: 497.61px;
   right: 12px;
-  top: 100px;
+  top: 40px;
   mix-blend-mode: normal;
 
   transform: matrix(0.98, 0.22, -0.21, 0.98, 0, 0);
@@ -305,14 +610,14 @@
   width: 485.1px;
   height: 520.66px;
   right: 60px;
-  top: 80px;
+  top: 10px;
   opacity: 0.35;
   transform: matrix(0.34, 0.9, -0.92, 0.4, 0, 0);
 }
 .round-3 {
   position: absolute;
   right: 40px;
-  top: 60px;
+  top: 0px;
   width: 471px;
   height: 584px;
 }
@@ -366,6 +671,217 @@
   color: #ffffff;
 }
 .navv4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.navv5 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.navv6 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.navv7 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+
+  letter-spacing: 0.1px;
+
+  color: #252b42;
+}
+.navv8 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+.navv9 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.navv10 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.apple {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navv11 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+
+  letter-spacing: 0.2px;
+
+  color: #ffffff;
+}
+.navv12 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+.navv13 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  text-align: center;
+}
+.navv14 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.navv15 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+
+  letter-spacing: 0.1px;
+  color: #23a6f0;
+}
+.navv16 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+
+  letter-spacing: 0.2px;
+
+  color: #737373;
+}
+.navv17 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #8ec2f2;
+}
+.navv18 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #23a6f0;
+}
+.navv19 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #23a6f0;
+}
+.navv20 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.navv21 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.navv22 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.image {
+  background-image: url(../img/man.png);
+}
+.navv23 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #252b42;
+}
+.navv24 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+}
+.navv25 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+.navv26 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+.navv27 {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
