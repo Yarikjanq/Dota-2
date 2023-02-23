@@ -1,6 +1,9 @@
 <template>
-  <div class="style">
-    <header class="flex h-[91px] items-center px-[70px] gap-[41px]" id="Home">
+  <div class="style min-w-[0px] md:min-w-[1200px]">
+    <header
+      class="flex h-[91px] items-center px-[70px] gap-[41px] hidden md:flex"
+      id="Home"
+    >
       <div class="text p-[13px_35px_13px_0]">BrandName</div>
 
       <div class="flex justify-between w-full gap-[10px]">
@@ -48,10 +51,79 @@
         alt=""
       />
     </header>
+    <!-- Mobile -->
+    <div
+      class="flex items-center justify-end p-[40px_20px_0px] justify-between"
+    >
+      <div class="text inline-block md:hidden">BrandName</div>
+      <div class="flex gap-[20px]">
+        <svg
+          class="inline-block md:hidden"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_1479_29934)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17.1901 15.478L23.6458 21.9337C23.8727 22.1608 24.0001 22.4687 24 22.7897C23.9999 23.1107 23.8723 23.4185 23.6452 23.6454C23.4181 23.8723 23.1102 23.9998 22.7892 23.9996C22.4682 23.9995 22.1604 23.8719 21.9335 23.6448L15.4778 17.1891C13.5479 18.6839 11.1211 19.3873 8.69104 19.1563C6.26097 18.9252 4.01018 17.7771 2.39656 15.9455C0.782936 14.1139 -0.0723147 11.7364 0.00479537 9.29656C0.0819054 6.85675 1.08558 4.53796 2.81165 2.81189C4.53771 1.08583 6.85651 0.0821496 9.29632 0.00503951C11.7361 -0.0720706 14.1137 0.78318 15.9453 2.3968C17.7769 4.01043 18.925 6.26122 19.156 8.69129C19.387 11.1214 18.6836 13.5482 17.1889 15.478H17.1901ZM9.60045 16.7992C11.5099 16.7992 13.3412 16.0406 14.6914 14.6904C16.0416 13.3402 16.8001 11.509 16.8001 9.59949C16.8001 7.69002 16.0416 5.85876 14.6914 4.50856C13.3412 3.15836 11.5099 2.39983 9.60045 2.39983C7.69098 2.39983 5.85971 3.15836 4.50951 4.50856C3.15932 5.85876 2.40078 7.69002 2.40078 9.59949C2.40078 11.509 3.15932 13.3402 4.50951 14.6904C5.85971 16.0406 7.69098 16.7992 9.60045 16.7992Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1479_29934">
+              <rect width="24" height="23.9997" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <svg
+          class="inline-block md:hidden"
+          width="24"
+          height="23"
+          viewBox="0 0 24 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_1479_29936)">
+            <path
+              d="M8.00039 22.4002C8.88405 22.4002 9.60039 21.6839 9.60039 20.8002C9.60039 19.9165 8.88405 19.2002 8.00039 19.2002C7.11674 19.2002 6.40039 19.9165 6.40039 20.8002C6.40039 21.6839 7.11674 22.4002 8.00039 22.4002Z"
+              fill="white"
+            />
+            <path
+              d="M19.1996 22.4002C20.0833 22.4002 20.7996 21.6839 20.7996 20.8002C20.7996 19.9165 20.0833 19.2002 19.1996 19.2002C18.316 19.2002 17.5996 19.9165 17.5996 20.8002C17.5996 21.6839 18.316 22.4002 19.1996 22.4002Z"
+              fill="white"
+            />
+            <path
+              d="M22.4 4.00016H4.656L4 0.640163C3.9626 0.456742 3.86206 0.292245 3.71589 0.175305C3.56971 0.0583653 3.38716 -0.00361159 3.2 0.000162751H0V1.60016H2.544L5.6 16.9602C5.6374 17.1436 5.73794 17.3081 5.88411 17.425C6.03029 17.542 6.21284 17.6039 6.4 17.6002H20.8V16.0002H7.056L6.4 12.8002H20.8C20.9849 12.8047 21.1657 12.745 21.3116 12.6312C21.4574 12.5174 21.5594 12.3566 21.6 12.1762L23.2 4.97616C23.2268 4.85746 23.2262 4.73421 23.1982 4.61579C23.1702 4.49737 23.1155 4.38689 23.0384 4.29278C22.9612 4.19867 22.8636 4.12339 22.753 4.07268C22.6424 4.02198 22.5217 3.99717 22.4 4.00016ZM20.16 11.2002H6.096L4.976 5.60016H21.4L20.16 11.2002Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1479_29936">
+              <rect width="24" height="22.4002" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
 
+        <button
+          @click="menu = !menu"
+          class="flex flex-col items-end space-y-2 inline-block md:hidden"
+        >
+          <span class="block w-10 h-0.5 bg-white"></span>
+          <span class="block w-8 h-0.5 bg-white"></span>
+          <span class="block w-5 h-0.5 bg-white"></span>
+        </button>
+        <div v-show="menu">
+          <div>asdsd asd aads asd</div>
+        </div>
+      </div>
+    </div>
     <!-- Telephone -->
     <div
-      class="w-full max-w-[1050px] h-[783px] mx-auto relative mt-[50px] flex items-start pt-[60px] px-[60px]"
+      class="w-full max-w-[1050px] h-[783px] mx-auto relative mt-[50px] justify-center md:justify-start flex items-start pt-[60px] px-[30px] md:px-[60px] md:h-[783px] h-[1050px]"
     >
       <div class="grid gap-[35px]">
         <div class="navv">
@@ -61,23 +133,28 @@
         <div class="navv1">
           We know how large objects will act, but things on a small scale.
         </div>
-        <div class="flex text-[#ffffff] gap-[10px]">
-          <div class="bg-[#23A6F0] rounded-[37px]">
-            <button class="p-[15px_36px]">Get Quote Now</button>
+        <div
+          class="md:flex text-[#ffffff] gap-[20px] grid md:gap-[10px] md:max-w-[100%] max-w-[185px] md:w-full mx-auto"
+        >
+          <div class="bg-[#23A6F0] rounded-[37px] text-center">
+            <button class="p-[10px_36px] text-[14px]">Get Quote Now</button>
           </div>
-          <div class="rounded-[37px] border-[1px] border-[#ffffff]">
-            <button class="p-[15px_36px]">Learn More</button>
+          <div
+            class="rounded-[37px] border-[1px] border-[#ffffff] text-center max-w-[154px] md:mx-0 mx-auto"
+          >
+            <button class="p-[10px_36px] text-[14px]">Learn More</button>
           </div>
         </div>
       </div>
-
-      <div>
-        <img class="round-1" src="../img/Vector-1.png" alt="" />
-      </div>
-      <div>
-        <img class="round-2" src="../img/Vector -2.png" alt="" />
+      <div class="">
         <div>
-          <img class="round-3" src="../img/mockup.png" alt="" />
+          <img class="round-1" src="../img/Vector-1.png" alt="" />
+        </div>
+        <div>
+          <img class="round-2" src="../img/Vector -2.png" alt="" />
+          <div>
+            <img class="round-3" src="../img/mockup.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -456,13 +533,14 @@
               <img class="h-[610px]" src="../img/man.png" alt="" />
             </div>
             <div class="w-[610px] bg-white h-[610px]">
-              <div class="p-[40px_50px] grid gap-[40px]">
+              <form action="#" @submit.prevent="sendEmail" class="p-[40px_50px] grid gap-[40px]">
                 <div class="navv23">Book Appointment</div>
                 <div>
                   <div class="navv24">Name*</div>
                   <div class="flex justify-center p-[14px_0px]">
                     <input
-                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                    v-model="name"
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px] p-[0px_10px]"
                       type="text"
                       placeholder="Full Name*"
                     />
@@ -470,7 +548,8 @@
                   <div class="navv24">Email address*</div>
                   <div class="flex justify-center p-[14px_0px]">
                     <input
-                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                    v-model="email"
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px] p-[0px_10px]"
                       type="text"
                       placeholder="example@gmail.com*"
                     />
@@ -478,7 +557,8 @@
                   <div class="navv24">Departement*</div>
                   <div class="flex justify-center p-[14px_0px]">
                     <input
-                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                    v-model="depart"
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px] p-[0px_10px]"
                       type="text"
                       placeholder="Full Name*"
                     />
@@ -486,18 +566,20 @@
                   <div class="navv24">Time*</div>
                   <div class="flex justify-center p-[14px_0px]">
                     <input
-                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px]"
+                    v-model="Subject"
+                      id="time"
+                      class="bg-[#F9F9F9] border-[1px] border-[#E6E6E6] rounded-[5px] w-full max-w-[507px] h-[50px] p-[0px_10px]"
                       type="text"
                       placeholder="Full Name*"
                     />
                   </div>
                 </div>
                 <div class="bg-[#23A6F0] rounded-[5px]">
-                  <button class="p-[15px_186px] navv25">
+                  <button class="p-[15px_186px] navv25" type="submit">
                     Book Appointment
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
 
             <div>
@@ -563,7 +645,32 @@
     </section>
   </div>
 </template>
+<script setup lang="ts">
+import { ref } from "vue";
+import {Email} from "../../Email/smtp"
+const name = ref('')
+const email = ref('')
+const depart = ref('')
+const Subject = ref('')
 
+
+const sendEmail =() =>{
+  Email.send({
+    SecureToken : "09378900-15f8-4261-a39f-7fb2e8385c5b",
+    To : 'aroslavskubenko228@gmail.com',
+    From : "aroslavskubenko228@gmail.com",
+    name: name.value,
+    email: email.value,
+    depart: depart.value,
+    Body : Subject.value,
+    Subject : "This is test email"
+    
+}).then(
+  message => alert(message)
+);
+}
+const menu = ref(false);
+</script>
 <style scoped>
 .style {
   background-color: #252b42;
@@ -888,5 +995,49 @@
   line-height: 20px;
   letter-spacing: 0.2px;
   color: #ffffff;
+}
+@media (max-width: 767px) {
+  .navv {
+    font-size: 40px;
+    line-height: normal;
+    height: auto;
+    text-align: center;
+    width: 100%;
+  }
+  .navv1 {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+  .round-1 {
+    bottom: 0;
+    top: 500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-height: 497px;
+    height: auto;
+    padding: 50px 30px;
+  }
+  .round-2 {
+    bottom: 0;
+    top: 500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-height: 520px;
+    height: auto;
+    padding: 50px 30px;
+  }
+  .round-3 {
+    bottom: 0;
+    top: 450px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-height: 584px;
+    height: auto;
+    padding: 60px 30px 0px 30px;
+  }
 }
 </style>

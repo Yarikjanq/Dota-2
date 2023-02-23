@@ -14,7 +14,7 @@
           >
             <div>
               <div class="flex justify-between mx-[20px]">
-                <div class="mx-auto">
+                <div class="mx-auto w-full">
                   <img
                     class="w-[40%] mx-auto room"
                     :src="'https://api.opendota.com' + heroes.img"
